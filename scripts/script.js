@@ -29,7 +29,7 @@ $('.map').waypoint(function(direction) {
 });
 
 $('.contact').waypoint(function(direction) {
-    $('.contactgi').addClass('animate__fadeInUp');
+    $('.contact').addClass('animate__fadeInUp');
 }, {
     offset: '100%'
 });

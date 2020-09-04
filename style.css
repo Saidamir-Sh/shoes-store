@@ -32,12 +32,35 @@ header {
     list-style: none;
 }
 .navbar-links li a {
+    position: relative;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
-    margin-right:4em ;
+    margin-right:4em;
 } 
+.navbar-links li a::after {
+display: block;
+content: "";
+position: absolute;
+height: 2px;
+background-color: tomato;
+width: 0;
+left: 50%;
+bottom: 0;
+-webkit-transform: translateX(-50%);
+-ms-transform: translateX(-50%);
+transform: translateX(-50%);
+-webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+.navbar-links li a:hover {
+    color: tomato;
+    text-decoration: none;
+}
+.navbar-links li a:hover:after {
+    width: 100%;
+}
 /*------------------MAIN CONTENT------------------------*/
 .brand-name {
     color: #fff;
@@ -186,6 +209,7 @@ header {
     display: none;
 }
 .card-text label span {
+    font-size: .8rem;
     position: relative;
     display: inline-block;
     background: #424242;
